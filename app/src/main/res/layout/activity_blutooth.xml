@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/bluetooth" />
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@drawable/ble_introduce" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size40"
+        android:padding="@dimen/size10"
+        android:text="Your transmitter and phone connect using Bluetooth.\n
+Bluetooth on your phone needs to be 'on' in order for the system to work.
+"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize14" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="@dimen/size10"
+        android:background="@color/background_light"
+        android:padding="@dimen/size10"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/status_bluetooth"
+            android:drawablePadding="@dimen/size10"
+            android:padding="@dimen/size5"
+            android:text="@string/bluetooth"
+            android:textSize="@dimen/textSize20" />
+
+        <com.microtechmd.pda_app.widget.myswitchbutton.LukeSwitchButton
+            android:id="@+id/bluetooth_switch"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            toggle:tbAsDefaultOn="true"
+            toggle:tbBorderWidth="1dp"
+            toggle:tbOffBorderColor="@color/background_dark"
+            toggle:tbOffColor="@color/background_dark" />
+    </RelativeLayout>
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/size20"
+        android:text="@string/next"
+        app:normalBackgroundColor="@color/btn_blue_normal"
+        app:pressedBackgroundColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+</RelativeLayout>

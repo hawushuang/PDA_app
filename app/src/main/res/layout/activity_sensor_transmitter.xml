@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/Sensor_Transmitter" />
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="@dimen/size30"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:padding="@dimen/size10"
+        android:text="Please make sure you've inserted a sensor before attaching the transmitter."
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize14" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif1"
+        android:layout_width="@dimen/size220"
+        android:layout_height="@dimen/size150"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/transmitter_introduce_1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gif1"
+        android:layout_marginLeft="@dimen/size30"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/size10"
+        android:text="Attach the transmitter to the sensor base."
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize14" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif2"
+        android:layout_width="@dimen/size220"
+        android:layout_height="@dimen/size150"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/transmitter_introduce_2" />
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/size20"
+        android:text="@string/next"
+        app:normalBackgroundColor="@color/btn_blue_normal"
+        app:pressedBackgroundColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+</RelativeLayout>

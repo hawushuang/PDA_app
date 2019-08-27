@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/activity_main_tab_settings" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginBottom="@dimen/size50"
+        android:text="@string/logout"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:normalBackgroundColor="@color/btn_blue_normal"
+        app:pressedBackgroundColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/size10"
+        app:layout_constraintBottom_toTopOf="@+id/button_logout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_user_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:iconRight="@drawable/ic_acount_1"
+                app:itemName="@string/user_profile"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:iconRight="@drawable/ic_tips_1"
+                app:itemName="@string/messagetips"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_pairing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:hasNext="true"
+                app:iconRight="@drawable/ic_device"
+                app:itemName="@string/device"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_friend"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:hasNext="true"
+                app:iconRight="@drawable/ic_friend"
+                app:itemName="@string/authorize"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_mode"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:hasNext="false"
+                app:itemName="@string/setting_general_mode"
+                app:itemValue="@string/setting_general_mode_time" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_hi_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:hasNext="false"
+                app:itemName="@string/fragment_settings_hi_bg_threshold"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_lo_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:hasNext="false"
+                app:itemName="@string/fragment_settings_lo_bg_threshold"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_language"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:hasNext="false"
+                app:itemName="@string/setting_general_language"
+                app:itemValue="@string/fragment_settings_language" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_recovery"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                android:clickable="true"
+                android:focusable="true"
+                app:hasNext="false"
+                app:iconRight="@drawable/ic_recovery_1"
+                app:itemName="@string/recovery"
+                app:itemValue="" />
+
+            <com.microtechmd.pda_app.widget.WidgetSettingItem
+                android:id="@+id/item_software_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/background_setting_item"
+                app:hasNext="false"
+                app:itemName="@string/setting_general_version"
+                app:itemValue="1.0.0" />
+
+            <!--<com.microtechmd.pda_app.widget.WidgetSettingItem-->
+            <!--android:id="@+id/item_logout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="1dp"-->
+            <!--android:background="@drawable/background_setting_item"-->
+            <!--android:clickable="true"-->
+            <!--android:focusable="true"-->
+            <!--app:hasNext="false"-->
+            <!--app:iconLeft="@drawable/ic_logout"-->
+            <!--app:itemName="@string/logout"-->
+            <!--app:itemValue="" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

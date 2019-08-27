@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_dark"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:padding="@dimen/size15"
+            android:text="@string/ok"
+            android:textColor="@color/btn_blue_normal"
+            android:textSize="@dimen/size20"
+            tools:ignore="ButtonStyle" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size1"
+            android:layout_weight="1"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:padding="@dimen/size15"
+            android:text="@string/cancel"
+            android:textColor="@color/btn_blue_normal"
+            android:textSize="@dimen/size20"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <com.microtechmd.pda_app.widget.rangedate.CalendarPickerView
+        android:id="@+id/range_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="@dimen/size1"
+        android:background="@color/background_light"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_constraintBottom_toTopOf="@+id/linearlayout"
+        app:tsquare_dividerColor="#AA8f8f8f"
+        app:tsquare_headerTextColor="@color/btn_blue_normal"
+        app:tsquare_titleTextColor="@color/white" />
+    <!--<com.savvi.rangedatepicker.CalendarPickerView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/range_date_picker"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="350dp"-->
+    <!--android:layout_marginBottom="@dimen/size1"-->
+    <!--android:background="@color/background_light"-->
+    <!--android:clipToPadding="false"-->
+    <!--android:paddingBottom="16dp"-->
+    <!--android:paddingLeft="16dp"-->
+    <!--android:paddingRight="16dp"-->
+    <!--android:scrollbarStyle="outsideOverlay"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/linearlayout"-->
+    <!--app:tsquare_dividerColor="@color/transparent"-->
+    <!--app:tsquare_headerTextColor="@color/btn_blue_normal"-->
+    <!--app:tsquare_titleTextColor="@color/white" />-->
+
+</android.support.constraint.ConstraintLayout>

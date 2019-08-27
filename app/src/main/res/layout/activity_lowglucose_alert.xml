@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:seekarc="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/lowglucose_alert" />
+    </android.support.v7.widget.Toolbar>
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size10"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size30"
+        android:text="@string/savedandnext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:normalBackgroundColor="@color/btn_blue_normal"
+        app:pressedBackgroundColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/size120"
+        android:layout_height="@dimen/size110"
+        android:layout_marginTop="@dimen/size20"
+        android:src="@drawable/glucose_alert"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/size10"
+        android:text="You will be alerted when your sensor glucose readings fall below:"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/size20"
+        app:layout_constraintBottom_toTopOf="@id/button_next"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView2">
+
+        <com.triggertrap.seekarc.SeekArc
+            android:id="@+id/seekArc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="40dp"
+            seekarc:touchInside="false" />
+
+        <LinearLayout
+            android:layout_width="@dimen/size180"
+            android:layout_height="@dimen/size180"
+            android:layout_centerInParent="true"
+            android:background="@drawable/calibration_round_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_text_glucose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:enabled="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLength="4"
+                android:padding="@dimen/size10"
+                android:text="3.1"
+                android:textSize="@dimen/textSize60"
+                seekarc:ignore="LabelFor" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_mmol_l"
+                android:textSize="@dimen/textSize20" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

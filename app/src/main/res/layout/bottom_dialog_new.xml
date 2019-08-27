@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size10">
+
+        <ImageView
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size10"
+            android:layout_gravity="center"
+            android:background="@drawable/drop" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.microtechmd.pda_app.widget.myswitchbutton.LukeSwitchButton
+            android:id="@+id/icon_switch"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/size5"
+            toggle:tbAsDefaultOn="true"
+            toggle:tbBorderWidth="1dp"
+            toggle:tbOffBorderColor="@color/background_dark"
+            toggle:tbOffColor="@color/background_dark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/icon_switch"
+            android:gravity="center"
+            android:padding="@dimen/size5"
+            android:text="图标显示" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size1"
+        android:layout_margin="@dimen/size2"
+        android:background="@color/background_dark" />
+
+    <LinearLayout
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/size10">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/app_normal_margin"
+            android:layout_marginLeft="@dimen/app_plus_margin"
+            android:layout_marginRight="@dimen/app_plus_margin"
+            android:textColor="@color/gray_deep"
+            android:visibility="gone"
+            tools:text="分享到" />
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/size10" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <attr name="style_text_base" format="reference" />
+    <attr name="style_text_white" format="reference" />
+    <attr name="style_text_black" format="reference" />
+    <attr name="style_text_tiny" format="reference" />
+    <attr name="style_text_small" format="reference" />
+    <attr name="style_text_medium" format="reference" />
+    <attr name="style_text_big" format="reference" />
+    <attr name="style_text_large" format="reference" />
+    <attr name="style_text_title_bar" format="reference" />
+    <attr name="style_text_panel_title" format="reference" />
+    <attr name="style_text_panel_subtitle" format="reference" />
+    <attr name="style_text_panel_comment" format="reference" />
+    <attr name="style_text_input" format="reference" />
+    <attr name="style_button_base" format="reference" />
+    <attr name="style_button_small" format="reference" />
+    <attr name="style_button_tab_main" format="reference" />
+    <attr name="style_bar_title" format="reference" />
+    <attr name="style_image_divider" format="reference" />
+    <attr name="style_edit_input" format="reference" />
+
+    <!-- Style name -->
+    <attr name="style_button_green" format="reference" />
+    <attr name="style_radio_button" format="reference" />
+    <attr name="style_shortcut_item" format="reference" />
+    <attr name="style_title_dialog" format="reference" />
+    <attr name="style_background_dialog_bottom" format="reference" />
+
+    <declare-styleable name="WidgetPickerSingle">
+        <attr name="pickerSingleHeader" format="string" />
+        <attr name="pickerSingleFooter" format="string" />
+        <attr name="pickerSingleFormat" format="enum">
+            <enum name="decimal" value="0" />
+            <enum name="time" value="1" />
+            <enum name="integer" value="2" />
+            <enum name="fraction" value="3" />
+        </attr>
+        <attr name="pickerSingleRatio" format="integer" />
+        <attr name="pickerSingleMax" format="integer" />
+        <attr name="pickerSingleMin" format="integer" />
+        <attr name="pickerSingleStep" format="integer" />
+        <attr name="pickerSingleValue" format="integer" />
+        <attr name="pickerSingleOrientation" format="enum">
+            <enum name="portrait" value="0" />
+            <enum name="landscape" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="WidgetPickerDouble">
+        <attr name="pickerDoubleHeader" format="string" />
+        <attr name="pickerDoubleFooter" format="string" />
+        <attr name="pickerDoubleFormat" format="enum">
+            <enum name="decimal" value="0" />
+            <enum name="time" value="1" />
+        </attr>
+        <attr name="pickerDoubleRatio" format="integer" />
+        <attr name="pickerDoubleMax" format="integer" />
+        <attr name="pickerDoubleMin" format="integer" />
+        <attr name="pickerDoubleStep" format="integer" />
+        <attr name="pickerDoubleValue" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="WidgetSettingItem">
+        <attr name="itemName" format="string" />
+        <attr name="itemValue" format="string" />
+        <attr name="isWizard" format="boolean" />
+        <attr name="isCheckBox" format="boolean" />
+        <attr name="iconLeft" format="reference" />
+        <attr name="iconRight" format="reference" />
+        <attr name="hasNext" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HistoryChartView">
+        <attr name="his_coordinate_drawable" format="reference" />
+        <attr name="his_up_drawable" format="reference" />
+        <attr name="his_right_drawable" format="reference" />
+        <attr name="his_carbs_bg_drawable" format="reference" />
+        <attr name="his_normal_bg_drawable" format="reference" />
+        <attr name="his_unnormal_bg_drawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="RuleView">
+        <attr name="arrow" format="reference" />
+        <attr name="unit" format="reference" />
+        <attr name="line" format="reference" />
+        <attr name="alarm" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CustomProgressBar">
+        <attr name="progress_bg" format="reference" />
+        <attr name="progress_pbg" format="reference" />
+        <attr name="progress_arrow" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="CustomHProgressBar">
+        <attr name="hprogress_bg" format="reference" />
+        <attr name="hprogress_pbg" format="reference" />
+        <attr name="hprogress_arrow" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="BasalChartView">
+        <attr name="coordinate_drawable" format="reference" />
+        <attr name="arrow_up_drawable" format="reference" />
+        <attr name="arrow_right_drawable" format="reference" />
+        <attr name="edit_drawable" format="reference" />
+        <attr name="edit_line_drawable" format="reference" />
+        <attr name="left_icon" format="reference" />
+        <attr name="right_icon" format="reference" />
+        <attr name="left_bg" format="reference" />
+        <attr name="bottom_bg" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="NumberRangeTextView">
+        <attr name="value" format="integer" />
+        <attr name="maxValue" format="integer" />
+        <attr name="minValue" format="integer" />
+        <attr name="step" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="BaseDecimalsTextView">
+        <attr name="decimal_value" format="float" />
+        <attr name="decimal_maxValue" format="float" />
+        <attr name="decimal_minValue" format="float" />
+        <attr name="decimal_step" format="float" />
+        <attr name="decimal_format" format="string" />
+        <attr name="decimal_type" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="DragableViewGroup">
+        <attr name="default_screen" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CountdownView">
+        <attr name="isHideTimeBackground" format="boolean" />
+        <attr name="isShowTimeBgDivisionLine" format="boolean" />
+        <attr name="timeBgDivisionLineColor" format="color" />
+        <attr name="timeBgDivisionLineSize" format="dimension" />
+        <attr name="timeBgColor" format="color" />
+        <attr name="timeBgSize" format="dimension" />
+        <attr name="timeBgRadius" format="dimension" />
+
+        <attr name="isTimeTextBold" format="boolean" />
+        <attr name="timeTextSize" format="dimension" />
+        <attr name="timeTextColor" format="color" />
+        <attr name="isShowDay" format="boolean" />
+        <attr name="isShowHour" format="boolean" />
+        <attr name="isShowMinute" format="boolean" />
+        <attr name="isShowSecond" format="boolean" />
+        <attr name="isShowMillisecond" format="boolean" />
+
+        <attr name="isSuffixTextBold" format="boolean" />
+        <attr name="suffixTextSize" format="dimension" />
+        <attr name="suffixTextColor" format="color" />
+        <attr name="suffix" format="string" />
+        <attr name="suffixDay" format="string" />
+        <attr name="suffixHour" format="string" />
+        <attr name="suffixMinute" format="string" />
+        <attr name="suffixSecond" format="string" />
+        <attr name="suffixMillisecond" format="string" />
+        <attr name="suffixGravity">
+            <enum name="top" value="0" />
+            <enum name="center" value="1" />
+            <enum name="bottom" value="2" />
+        </attr>
+        <attr name="suffixLRMargin" format="dimension" />
+        <attr name="suffixDayLeftMargin" format="dimension" />
+        <attr name="suffixDayRightMargin" format="dimension" />
+        <attr name="suffixHourLeftMargin" format="dimension" />
+        <attr name="suffixHourRightMargin" format="dimension" />
+        <attr name="suffixMinuteLeftMargin" format="dimension" />
+        <attr name="suffixMinuteRightMargin" format="dimension" />
+        <attr name="suffixSecondLeftMargin" format="dimension" />
+        <attr name="suffixSecondRightMargin" format="dimension" />
+        <attr name="suffixMillisecondLeftMargin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StateButton">
+
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference" />
+        <attr name="pressedTextColor" format="color|reference" />
+        <attr name="unableTextColor" format="color|reference" />
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference" />
+        <attr name="strokeDashGap" format="dimension|reference" />
+        <attr name="normalStrokeWidth" format="dimension|reference" />
+        <attr name="pressedStrokeWidth" format="dimension|reference" />
+        <attr name="unableStrokeWidth" format="dimension|reference" />
+        <attr name="normalStrokeColor" format="color|reference" />
+        <attr name="pressedStrokeColor" format="color|reference" />
+        <attr name="unableStrokeColor" format="color|reference" />
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference" />
+        <attr name="pressedBackgroundColor" format="color|reference" />
+        <attr name="unableBackgroundColor" format="color|reference" />
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference" />
+        <attr name="round" format="boolean|reference" />
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference" />
+
+    </declare-styleable>
+
+    <declare-styleable name="StateImageView">
+        <attr name="normalBackground" format="color|reference" />
+        <attr name="pressedBackground" format="color|reference" />
+        <attr name="unableBackground" format="color|reference" />
+
+        <!--animation duration-->
+        <attr name="AnimationDuration" format="integer|reference" />
+    </declare-styleable>
+    <declare-styleable name="SwitchMultiButton">
+        <attr name="strokeRadius" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="selectedTab" format="integer" />
+        <attr name="selectedColor" format="color|reference" />
+        <attr name="switchTabs" format="reference" />
+        <attr name="typeface" format="string" />
+    </declare-styleable>
+
+    <string-array name="items_per_page">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>All</item>
+    </string-array>
+
+    <string-array name="items_raw_data">
+        <item>deviceid</item>
+        <item>sensorid</item>
+        <item>devicetime</item>
+        <item>eventindex</item>
+        <item>eventtype</item>
+        <item>split</item>
+        <item>eventdata</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+    </string-array>
+
+    <string-array name="items_raw_data_old">
+        <item>deviceid</item>
+        <item>sensorid</item>
+        <item>devicetime</item>
+        <item>eventindex</item>
+        <item>eventtype</item>
+        <item>eventdata</item>
+        <item>P1</item>
+        <item>P2</item>
+        <item>P3</item>
+        <item>P4</item>
+        <item>P5</item>
+        <item>P6</item>
+        <item>P7</item>
+        <item>P8</item>
+        <item>P9</item>
+    </string-array>
+
+    <declare-styleable name="StickyListHeadersListView">
+        <attr name="stickyListHeadersListViewStyle" format="reference" />
+
+        <!-- View attributes -->
+        <attr name="android:clipToPadding" />
+        <attr name="android:scrollbars" />
+        <attr name="android:overScrollMode" />
+        <attr name="android:padding" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingBottom" />
+
+        <!-- ListView attributes -->
+        <attr name="android:fadingEdgeLength" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:cacheColorHint" />
+        <attr name="android:choiceMode" />
+        <attr name="android:drawSelectorOnTop" />
+        <attr name="android:fastScrollEnabled" />
+        <attr name="android:fastScrollAlwaysVisible" />
+        <attr name="android:listSelector" />
+        <attr name="android:scrollingCache" />
+        <attr name="android:scrollbarStyle" />
+        <attr name="android:divider" />
+        <attr name="android:dividerHeight" />
+        <attr name="android:transcriptMode" />
+        <attr name="android:stackFromBottom" />
+
+        <!-- StickyListHeaders attributes -->
+        <attr name="hasStickyHeaders" format="boolean" />
+        <attr name="isDrawingListUnderStickyHeader" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleSeekBar">
+        <attr name="bsb_min" format="float|reference" /> <!--min < max, default: 0.0f-->
+        <attr name="bsb_max" format="float|reference" /> <!--min < max, default: 100.0f-->
+        <attr name="bsb_progress" format="float|reference" /> <!--real time progress value, default: min-->
+        <attr name="bsb_is_float_type" format="boolean" /> <!--support for float type-->
+        <attr name="bsb_track_size" format="dimension|reference" /> <!--height of right-track(on the right of thumb), default: 2dp-->
+        <!--height of left-track(on the left of thumb), default: 2dp higher than right-track's height-->
+        <attr name="bsb_second_track_size" format="dimension|reference" />
+        <attr name="bsb_thumb_radius" format="dimension|reference" /> <!--radius of thumb, default: 2dp higher than left-track's height-->
+        <!--radius of thumb when be dragging, default: 2 times of left-track's height-->
+        <attr name="bsb_thumb_radius_on_dragging" format="dimension|reference" />
+        <attr name="bsb_track_color" format="color|reference" /> <!--color of right-track, default: R.color.colorPrimary-->
+        <attr name="bsb_second_track_color" format="color|reference" /> <!--color of left-track, default: R.color.colorAccent-->
+        <attr name="bsb_thumb_color" format="color|reference" /> <!--color of thumb, default: same as left-track's color-->
+        <attr name="bsb_section_count" format="integer|reference" /> <!--shares of whole progress(max - min), default: 10-->
+        <attr name="bsb_show_section_mark" format="boolean" /> <!--show demarcation points or not, default: false-->
+        <attr name="bsb_auto_adjust_section_mark" format="boolean" /> <!--auto scroll to the nearest section_mark or not, default: false-->
+        <attr name="bsb_show_section_text" format="boolean" /> <!--show section-text or not, default: false-->
+        <attr name="bsb_section_text_size" format="dimension|reference" /> <!--text size of section-text, default: 14sp-->
+        <attr name="bsb_section_text_color" format="color|reference" /> <!--text color of section-text, default: same as right-track's color-->
+        <!--text position of section-text relative to track, sides, bottom_sides, below_section_mark, default: sides-->
+        <attr name="bsb_section_text_position">
+            <enum name="sides" value="0" />
+            <enum name="bottom_sides" value="1" />
+            <enum name="below_section_mark" value="2" />
+        </attr>
+        <attr name="bsb_section_text_interval" format="integer" /> <!--the interval of two section-text, default: 1-->
+        <attr name="bsb_show_thumb_text" format="boolean" /> <!--show real time progress-text under thumb or not, default: false-->
+        <attr name="bsb_thumb_text_size" format="dimension|reference" /> <!--text size of progress-text, default: 14sp-->
+        <attr name="bsb_thumb_text_color" format="color|reference" /> <!--text color of progress-text, default: same as left-track's color-->
+        <attr name="bsb_show_progress_in_float" format="boolean" /> <!--show bubble-progress in float or not, default: false-->
+        <attr name="bsb_touch_to_seek" format="boolean" /> <!--touch anywhere on track to quickly seek, default: false-->
+        <attr name="bsb_seek_step_section" format="boolean" /> <!--seek one step by one section, the progress is discrete, default: false-->
+        <attr name="bsb_seek_by_section" format="boolean" /> <!--seek by section, the progress may not be linear, default: false-->
+        <attr name="bsb_bubble_color" format="color|reference" /> <!--color of bubble, default: same as left-track's color-->
+        <attr name="bsb_bubble_text_size" format="dimension|reference" /> <!--text size of bubble-progress, default: 14sp-->
+        <attr name="bsb_bubble_text_color" format="color|reference" /> <!--text color of bubble-progress, default: #ffffffff-->
+        <attr name="bsb_anim_duration" format="integer" /> <!--duration of animation, default: 200ms-->
+        <attr name="bsb_always_show_bubble" format="boolean" /> <!--bubble shows all time, default: false-->
+        <attr name="bsb_always_show_bubble_delay" format="integer" /> <!--the delay duration before bubble shows all the time, default: 200ms-->
+        <attr name="bsb_hide_bubble" format="boolean" /> <!--hide bubble, default: false-->
+        <attr name="bsb_rtl" format="boolean" /> <!--right to left, default: false-->
+        <attr name="android:enabled" />
+    </declare-styleable>
+
+    <declare-styleable name="AutoFlowLayout">
+        <attr name="singleLine" format="boolean" />
+        <attr name="maxLines" format="integer" />
+        <attr name="multiChecked" format="boolean" />
+        <attr name="horizontalSpace" format="dimension" />
+        <attr name="verticalSpace" format="dimension" />
+        <attr name="columnNumbers" format="integer" />
+        <attr name="rowNumbers" format="integer" />
+        <attr name="cutLineWidth" format="dimension" />
+        <attr name="cutLineColor" format="color" />
+        <attr name="cutLine" format="boolean" />
+        <attr name="lineCenter" format="boolean" />
+    </declare-styleable>
+
+    <!--滚动选择器通用属性-->
+    <declare-styleable name="ScrollPickerView">
+        <!-- 中间item的背景-->
+        <attr name="spv_center_item_background" format="reference|color" />
+        <!-- 可见的item数量，默认为3个-->
+        <attr name="spv_visible_item_count" format="integer" />
+        <!-- 中间item的位置,默认为 mVisibleItemCount / 2-->
+        <attr name="spv_center_item_position" format="integer" />
+        <!-- 是否循环滚动，默认为true，开启-->
+        <attr name="spv_is_circulation" format="boolean" />
+        <!-- 不允许父组件拦截触摸事件，设置为true为不允许拦截，此时该设置才生效 -->
+        <attr name="spv_disallow_intercept_touch" format="boolean" />
+        <!-- 滚动的方向-->
+        <attr name="spv_orientation" format="string">
+            <enum name="horizontal" value="1" />
+            <enum name="vertical" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!--图片选择器-->
+    <declare-styleable name="BitmapScrollPicker">
+        <!-- 绘制图片的方式-->
+        <attr name="spv_draw_bitmap_mode" format="string">
+            <enum name="fill" value="1" />
+            <enum name="center" value="2" />
+            <enum name="size" value="3" />
+        </attr>
+        <!-- 绘制图片的方式为size时，指定的图片绘制大小-->
+        <attr name="spv_draw_bitmap_width" format="dimension" />
+        <attr name="spv_draw_bitmap_height" format="dimension" />
+        <!-- item内容缩放倍数-->
+        <attr name="spv_min_scale" format="float" />
+        <attr name="spv_max_scale" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CalendarPickerView">
+        <attr name="android:background" />
+        <attr name="tsquare_dividerColor" format="color" />
+        <attr name="tsquare_dayBackground" format="reference" />
+        <attr name="tsquare_dayTextColor" format="color" />
+        <attr name="tsquare_titleTextColor" format="color" />
+        <attr name="tsquare_displayHeader" format="boolean" />
+        <attr name="tsquare_headerTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="calendar_cell">
+        <attr name="tsquare_state_selectable" format="boolean" />
+        <attr name="tsquare_state_current_month" format="boolean" />
+        <attr name="tsquare_state_today" format="boolean" />
+        <attr name="tsquare_state_range_first" format="boolean" />
+        <attr name="tsquare_state_range_middle" format="boolean" />
+        <attr name="tsquare_state_range_last" format="boolean" />
+        <attr name="tsquare_state_highlighted" format="boolean" />
+        <attr name="tsquare_state_unavailable" format="boolean" />
+        <attr name="tsquare_state_deactivated" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="el_parallax" format="float" />
+        <attr name="android:orientation"/>
+    </declare-styleable>
+</resources>

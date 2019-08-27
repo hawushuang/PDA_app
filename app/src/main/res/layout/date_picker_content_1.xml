@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <com.microtechmd.pda_app.widget.rangedate.CalendarPickerView
+        android:id="@+id/range_date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginBottom="@dimen/size1"
+        android:background="@color/background_light"
+        android:clipToPadding="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="16dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:tsquare_dividerColor="#AA8f8f8f"
+        app:tsquare_headerTextColor="@color/btn_blue_normal"
+        app:tsquare_titleTextColor="@color/white" />
+
+</android.support.constraint.ConstraintLayout>

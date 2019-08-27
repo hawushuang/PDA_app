@@ -1,0 +1,141 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "2:5124918560345326020",
+      "lastPropertyId": "8:8999804082260969952",
+      "name": "DbHistory",
+      "properties": [
+        {
+          "id": "1:2875875085062048988",
+          "name": "id"
+        },
+        {
+          "id": "2:2082699751814049186",
+          "name": "rf_address"
+        },
+        {
+          "id": "3:749856464873197889",
+          "name": "date_time"
+        },
+        {
+          "id": "4:4322585846736192349",
+          "name": "event_index"
+        },
+        {
+          "id": "5:6391221323989810853",
+          "name": "event_type"
+        },
+        {
+          "id": "6:4326182457216199187",
+          "name": "supplement_value"
+        },
+        {
+          "id": "7:2547889360420920579",
+          "name": "sensorIndex"
+        },
+        {
+          "id": "8:8999804082260969952",
+          "name": "value"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:7525970208249778026",
+      "lastPropertyId": "18:2466501851863589714",
+      "name": "DbRawHistory",
+      "properties": [
+        {
+          "id": "1:4111465329461587456",
+          "name": "id"
+        },
+        {
+          "id": "2:1653779534691751177",
+          "name": "device_id"
+        },
+        {
+          "id": "3:98188019043950019",
+          "name": "date_time"
+        },
+        {
+          "id": "4:8447437082281680368",
+          "name": "sensorIndex"
+        },
+        {
+          "id": "5:6610979847404675209",
+          "name": "event_index"
+        },
+        {
+          "id": "6:7470676286712255793",
+          "name": "event_type"
+        },
+        {
+          "id": "7:2729967098482451415",
+          "name": "value"
+        },
+        {
+          "id": "8:6022723523057875604",
+          "name": "p1"
+        },
+        {
+          "id": "9:7768896258255242175",
+          "name": "p2"
+        },
+        {
+          "id": "10:2450380994304035756",
+          "name": "p3"
+        },
+        {
+          "id": "11:6392657469749845062",
+          "name": "p4"
+        },
+        {
+          "id": "12:495268013832628498",
+          "name": "p5"
+        },
+        {
+          "id": "13:3418843277476227310",
+          "name": "p6"
+        },
+        {
+          "id": "14:5032579401470166611",
+          "name": "p7"
+        },
+        {
+          "id": "15:2472580405139319519",
+          "name": "p8"
+        },
+        {
+          "id": "16:4170397122262228410",
+          "name": "p9"
+        },
+        {
+          "id": "18:2466501851863589714",
+          "name": "record_no"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:7525970208249778026",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [
+    5562864333743372511
+  ],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [
+    1660783498624510863,
+    7897104964486464825,
+    4947380291073076160,
+    2645291970969389559
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="健康状态" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="?style_text_medium"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/size5"
+            android:padding="@dimen/size5"
+            android:text="@string/actions_bg_save" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginRight="@dimen/size15"
+        android:layout_marginBottom="@dimen/size160"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/ll_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5">
+
+            <TextView
+                android:id="@+id/exercise_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:text="Feeling BG High"
+                android:textColor="@color/text_black"
+                android:textSize="@dimen/textSize35" />
+
+            <TextView
+                android:id="@+id/start_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/exercise_name"
+                android:layout_marginBottom="@dimen/size20"
+                android:paddingStart="@dimen/size30"
+                android:paddingEnd="@dimen/size0"
+                android:text="13:35"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textSize50" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/start_time"
+                android:paddingStart="@dimen/size35"
+                android:paddingEnd="@dimen/size0"
+                android:text="Start Time"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textSize20" />
+
+            <TextView
+                android:id="@+id/tv_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/exercise_name"
+                android:layout_marginTop="@dimen/size20"
+                android:paddingStart="@dimen/size35"
+                android:paddingEnd="@dimen/size0"
+                android:text="End Time"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textSize20" />
+
+            <TextView
+                android:id="@+id/end_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_end"
+                android:paddingStart="@dimen/size30"
+                android:paddingEnd="@dimen/size0"
+                android:text="14:35"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textSize50" />
+        </RelativeLayout>
+
+        <com.microtechmd.pda_app.widget.ScrollSelecedView.BitmapScrollPicker
+            android:id="@+id/bitmapScrollPicker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:spv_center_item_background="@drawable/exercise_selected"
+            app:spv_disallow_intercept_touch="true"
+            app:spv_draw_bitmap_mode="center"
+            app:spv_is_circulation="false"
+            app:spv_max_scale="1.0"
+            app:spv_min_scale="0.6"
+            app:spv_visible_item_count="5" />
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/size60"
+        android:background="@drawable/button_add_image" />
+</RelativeLayout>

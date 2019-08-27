@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background_light"
+    android:orientation="vertical"
+    android:padding="@dimen/size10">
+
+    <ImageView
+        android:id="@+id/iv_draw_bg"
+        android:layout_width="@dimen/size80"
+        android:layout_height="@dimen/size80"
+        android:layout_gravity="center"
+        android:background="@drawable/carb" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/size5"
+        android:text="碳水化合物"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textSize14" />
+
+    <com.microtechmd.pda_app.widget.myswitchbutton.LukeSwitchButton
+        android:id="@+id/icon_sub_switch"
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/size10"
+        toggle:tbAsDefaultOn="true"
+        toggle:tbBorderWidth="1dp"
+        toggle:tbOffBorderColor="@color/background_dark"
+        toggle:tbOffColor="@color/background_dark" />
+</LinearLayout>

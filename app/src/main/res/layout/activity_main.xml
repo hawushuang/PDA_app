@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.microtechmd.pda_app.activity.MainActivity">
+
+
+    <RadioGroup
+        android:id="@+id/radio_group_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size68"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_dark"
+        android:orientation="horizontal">
+
+        <com.microtechmd.pda_app.widget.WidgetRadioButton
+            android:id="@+id/radio_button_tab_history"
+            style="?style_button_tab_main"
+            android:layout_height="@dimen/size48"
+            android:layout_gravity="bottom"
+            android:background="@color/background_light"
+            android:drawableTop="@drawable/button_tab_main_history"
+            android:text="@string/activity_main_tab_history" />
+
+        <com.microtechmd.pda_app.widget.WidgetRadioButton
+            android:id="@+id/radio_button_tab_trends"
+            style="?style_button_tab_main"
+            android:layout_height="@dimen/size48"
+            android:layout_gravity="bottom"
+            android:background="@color/background_light"
+            android:drawableTop="@drawable/button_tab_main_trends"
+            android:text="@string/activity_main_tab_trends" />
+
+        <com.microtechmd.pda_app.widget.WidgetRadioButton
+            android:id="@+id/radio_button_tab_home"
+            style="?style_button_tab_main"
+            android:paddingTop="@dimen/size19"
+            android:layout_height="@dimen/size68"
+            android:layout_gravity="center"
+            android:background="@drawable/special_tab_round_bg"
+            android:drawableTop="@drawable/button_tab_main_home" />
+
+        <com.microtechmd.pda_app.widget.WidgetRadioButton
+            android:id="@+id/radio_button_tab_calibration"
+            style="?style_button_tab_main"
+            android:layout_height="@dimen/size48"
+            android:layout_gravity="bottom"
+            android:background="@color/background_light"
+            android:drawableTop="@drawable/button_tab_main_calibration"
+            android:text="@string/activity_main_tab_calibration" />
+
+        <com.microtechmd.pda_app.widget.WidgetRadioButton
+            android:id="@+id/radio_button_tab_shop"
+            style="?style_button_tab_main"
+            android:layout_height="@dimen/size48"
+            android:layout_gravity="bottom"
+            android:background="@color/background_light"
+            android:drawableTop="@drawable/button_tab_main_shop"
+            android:text="@string/test" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/layout_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/radio_group_tab" />
+
+</RelativeLayout>

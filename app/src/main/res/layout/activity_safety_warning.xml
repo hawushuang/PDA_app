@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/alertandwarning" />
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="@dimen/size140"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="@dimen/size40"
+        android:src="@drawable/alert_warning" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:padding="@dimen/size10"
+        android:text="Do not ignore symptoms of high and low glucose.\n\n
+
+If your glucose alerts and sensor glucose readings do not match your symptoms or expectations, measure your fingerstick glucose with a blood glucose meter."
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize14" />
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text3"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:text="@string/next"
+        app:normalBackgroundColor="@color/btn_blue_normal"
+        app:pressedBackgroundColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size10"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size10"
+        android:text="Full Safety Statement"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize10" />
+</RelativeLayout>

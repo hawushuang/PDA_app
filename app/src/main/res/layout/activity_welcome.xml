@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size80"
+        android:src="@drawable/aidex" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="@dimen/size20"
+        android:gravity="center_horizontal"
+        android:text="Welcome to AiDEX!"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textSize28" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight="@dimen/size10"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size6"
+        android:text="Take your first step into a more active and healthier life!"
+        android:textColor="#FF537CA1"
+        android:textSize="@dimen/textSize14" />
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size130"
+        android:text="@string/i_m_a_new_user"
+        android:textSize="@dimen/textSize18"
+        app:normalBackgroundColor="@color/btn_blue_normal"
+        app:pressedBackgroundColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+    <com.microtechmd.pda_app.widget.StateButton
+        android:id="@+id/button_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_register"
+        android:layout_marginLeft="@dimen/size20"
+        android:layout_marginRight="@dimen/size20"
+        android:layout_marginTop="@dimen/size15"
+        android:text="@string/returning_user"
+        android:textSize="@dimen/textSize18"
+        app:normalStrokeColor="@color/btn_blue_normal"
+        app:normalStrokeWidth="@dimen/size1"
+        app:normalTextColor="@color/btn_blue_normal"
+        app:pressedStrokeColor="@color/btn_blue_normal"
+        app:pressedStrokeWidth="@dimen/size1"
+        app:pressedTextColor="@color/btn_blue_press"
+        app:radius="22dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size10"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size10"
+        android:text="Terms of Use and Privacy Policy"
+        android:textColor="@color/text_light"
+        android:textSize="@dimen/textSize10" />
+</RelativeLayout>

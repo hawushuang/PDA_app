@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sysu.zyb.panellistlibrary.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/id_tv_01"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="01" />
+
+    <TextView
+        android:id="@+id/id_tv_02"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="02" />
+
+    <TextView
+        android:id="@+id/id_tv_03"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="03" />
+
+    <TextView
+        android:id="@+id/id_tv_04"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="04" />
+
+    <TextView
+        android:id="@+id/id_tv_05"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="05" />
+
+    <TextView
+        android:id="@+id/id_tv_06"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="06" />
+
+    <TextView
+        android:id="@+id/id_tv_07"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/size5"
+        tools:text="07" />
+
+
+</sysu.zyb.panellistlibrary.CheckableLinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:seekarc="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/carbs" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="?style_text_medium"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/size5"
+            android:padding="@dimen/size5"
+            android:text="@string/actions_bg_save" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/fragment_container1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size170"
+        android:layout_margin="@dimen/size10"
+        android:background="@drawable/circle_shape_light"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:paddingTop="@dimen/size10"
+            android:text="108"
+            android:textSize="@dimen/textSize50"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_cal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:text="Kcal"
+            android:textSize="@dimen/textSize20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_value" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size90"
+            android:layout_margin="@dimen/size10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_left"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size90"
+            android:layout_margin="@dimen/size10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_right"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.widget.Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/background_light"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_container1" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space">
+
+        <ImageView
+            android:id="@+id/iv_food_type"
+            android:layout_width="@dimen/size140"
+            android:layout_height="@dimen/size140"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/size10"
+            android:background="@drawable/food_1" />
+
+        <com.triggertrap.seekarc.SeekArc
+            android:id="@+id/seekArc"
+            android:layout_width="@dimen/size260"
+            android:layout_height="@dimen/size260"
+            android:padding="30dp"
+            seekarc:clockwise="false"
+            seekarc:mStartAngle="120"
+            seekarc:sweepAngle="120"
+            seekarc:touchInside="false" />
+
+        <ImageButton
+            android:id="@+id/subtract"
+            android:layout_width="@dimen/size38"
+            android:layout_height="@dimen/size38"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/size8"
+            android:layout_marginTop="@dimen/size42"
+            android:background="@drawable/button_subtract_image" />
+
+        <ImageButton
+            android:id="@+id/add"
+            android:layout_width="@dimen/size38"
+            android:layout_height="@dimen/size38"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginTop="@dimen/size40"
+            android:layout_marginEnd="@dimen/size8"
+            android:background="@drawable/button_add_image" />
+    </FrameLayout>
+
+    <com.microtechmd.pda_app.widget.WidgetSettingItem
+        android:id="@+id/eating_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size5"
+        android:background="@drawable/background_setting_item"
+        android:clickable="true"
+        android:focusable="true"
+        app:itemName="@string/time"
+        app:itemValue="11:20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container2" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size1"
+        android:layout_marginBottom="@dimen/size15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/eating_time" />
+
+</android.support.constraint.ConstraintLayout>

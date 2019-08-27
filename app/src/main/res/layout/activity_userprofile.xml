@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/user_profile" />
+
+        <TextView
+            android:id="@+id/text_view_right"
+            style="?style_text_panel_title"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/size5"
+            android:text="@string/actions_reservoir_cannula_skip" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/background_light"
+                android:paddingLeft="@dimen/size15">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="?style_text_medium"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:text="@string/name"
+                    android:textColor="@color/text_white"
+                    />
+
+                <EditText
+                    android:id="@+id/tv_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size15"
+                    android:layout_toEndOf="@+id/textView3"
+                    android:background="@null"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="@dimen/size15"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/textSize20"
+                    tools:text="小明" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/background_light"
+                android:paddingLeft="@dimen/size15"
+                android:paddingRight="@dimen/size15">
+
+                <TextView
+                    style="?style_text_medium"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:text="@string/gender"
+                    android:textColor="@color/text_white"
+                   />
+
+                <RadioGroup
+                    android:id="@+id/sex_switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal"
+                    tools:ignore="RelativeOverlap">
+
+                    <RadioButton
+                        android:id="@+id/male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/size5"
+                        android:checked="true"
+                        android:text="@string/male"
+                        android:textSize="@dimen/textSize20" />
+
+                    <RadioButton
+                        android:id="@+id/femle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female"
+                        android:textSize="@dimen/textSize20" />
+                </RadioGroup>
+
+                <!--<com.nightonke.jellytogglebutton.JellyToggleButton-->
+                <!--android:id="@+id/sex_switch_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:layout_alignParentEnd="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--app:jtbDuration="300"-->
+                <!--app:jtbJelly="active_stiff_slim_jim"-->
+                <!--app:jtbLeftBackgroundColor="@color/background_light"-->
+                <!--app:jtbLeftText="@string/male"-->
+                <!--app:jtbLeftTextColor="@color/text_white"-->
+                <!--app:jtbLeftTextSize="@dimen/textSize20"-->
+                <!--app:jtbLeftThumbColor="@color/btn_blue_normal"-->
+                <!--app:jtbRightBackgroundColor="@color/background_light"-->
+                <!--app:jtbRightText="@string/female"-->
+                <!--app:jtbRightTextColor="@color/text_white"-->
+                <!--app:jtbRightTextSize="@dimen/textSize20"-->
+                <!--app:jtbRightThumbColor="@color/btn_blue_normal"-->
+                <!--app:jtbTextMarginCenter="@dimen/size16"-->
+                <!--app:jtbTextMarginLeft="@dimen/size10"-->
+                <!--app:jtbTextMarginRight="@dimen/size10" />-->
+
+                <Spinner
+                    android:id="@+id/sex_switch"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/background_light"
+                    android:dropDownVerticalOffset="40dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/background_light"
+                android:paddingLeft="@dimen/size15">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="?style_text_medium"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:text="@string/email"
+                    android:textColor="@color/text_white"
+                     />
+
+                <EditText
+                    android:id="@+id/tv_item_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/size15"
+                    android:layout_toEndOf="@+id/textView4"
+                    android:background="@null"
+                    android:drawablePadding="@dimen/size10"
+                    android:gravity="end|center_vertical"
+                    android:paddingRight="@dimen/size15"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/textSize20"
+                    tools:text="aaa@aaa.com" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_item_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/background_light"
+                android:paddingLeft="@dimen/size15"
+                android:paddingRight="@dimen/size15">
+
+                <TextView
+                    style="?style_text_medium"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:text="@string/birthday"
+                    android:textColor="@color/text_white"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_item_birthday"
+                    style="?style_text_medium"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:padding="@dimen/size5"
+                    android:textColor="@color/text_white"
+                    tools:text="199990101" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_item_height"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/background_light"
+                android:paddingLeft="@dimen/size15"
+                android:paddingRight="@dimen/size15">
+
+                <TextView
+                    style="?style_text_medium"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:text="@string/height"
+                    android:textColor="@color/text_white"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_height_unit"
+                    style="?style_text_medium"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:padding="@dimen/size5"
+                    android:text=" cm"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/tv_item_height"
+                    style="?style_text_medium"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tv_item_height_unit"
+                    android:drawablePadding="@dimen/size10"
+                    android:padding="@dimen/size5"
+                    android:textColor="@color/text_white"
+                    tools:text="175" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_item_weight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="1dp"
+                android:background="@color/background_light"
+                android:paddingLeft="@dimen/size15"
+                android:paddingRight="@dimen/size15">
+
+                <TextView
+                    style="?style_text_medium"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:text="@string/weight"
+                    android:textColor="@color/text_white"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_item_weight_unit"
+                    style="?style_text_medium"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/size10"
+                    android:padding="@dimen/size5"
+                    android:text=" kg"
+                    android:textColor="@color/text_white" />
+
+                <TextView
+                    android:id="@+id/tv_item_weight"
+                    style="?style_text_medium"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tv_item_weight_unit"
+                    android:drawablePadding="@dimen/size10"
+                    android:padding="@dimen/size5"
+                    android:textColor="@color/text_white"
+                    tools:text="75" />
+
+            </RelativeLayout>
+
+            <com.microtechmd.pda_app.widget.StateButton
+                android:id="@+id/button_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size20"
+                android:layout_marginTop="@dimen/size20"
+                android:layout_marginRight="@dimen/size20"
+                android:text="@string/next"
+                android:textSize="@dimen/textSize18"
+                app:normalBackgroundColor="@color/btn_blue_normal"
+                app:pressedBackgroundColor="@color/btn_blue_press"
+                app:radius="22dp" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

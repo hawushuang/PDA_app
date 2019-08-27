@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/size5">
+
+    <TextView
+        android:id="@+id/tv_unit_bolus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size2"
+        android:text="Bolus(U)"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size2"
+        android:text="BG(mmol/L)"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time_line_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size30"
+        android:paddingTop="@dimen/size2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit_bolus"
+        tools:text="2018-08-22" />
+
+    <TextView
+        android:id="@+id/tv_time_line_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size30"
+        android:paddingTop="@dimen/size2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit_bolus"
+        tools:text="2018-08-23" />
+
+    <lecho.lib.hellocharts.view.LineChartView
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit_bolus" />
+
+    <TextView
+        android:id="@+id/display_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size10"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textSize45"
+        app:layout_constraintLeft_toRightOf="@+id/tv_time_line_left"
+        app:layout_constraintTop_toTopOf="@id/tv_time_line_left"
+        tools:text="4.1" />
+
+    <TextView
+        android:id="@+id/display_week"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size8"
+        android:textColor="@color/text_white"
+        app:layout_constraintLeft_toRightOf="@+id/display_value"
+        app:layout_constraintTop_toTopOf="@+id/display_value"
+        tools:text="Wednesday" />
+
+    <TextView
+        android:id="@+id/display_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/display_week"
+        android:padding="@dimen/size8"
+        android:textColor="@color/text_white"
+        app:layout_constraintBottom_toBottomOf="@+id/display_value"
+        app:layout_constraintLeft_toRightOf="@+id/display_value"
+        tools:text="10:10" />
+
+
+</android.support.constraint.ConstraintLayout>

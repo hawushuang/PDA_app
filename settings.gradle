@@ -1,0 +1,1 @@
+include ':app', ':PDALibrary', ':SeekArc_library', ':baseble', ':aajavaTest', ':mypicker', ':tableview', ':form'

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context="com.microtechmd.pda_app.activity.SplashActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="?style_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@null">
+
+        <ImageButton
+            android:id="@+id/ibt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/text_view_title_bar"
+            style="?style_text_title_bar"
+            android:text="@string/medicine" />
+
+        <TextView
+            android:id="@+id/tv_save"
+            style="?style_text_medium"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/size5"
+            android:padding="@dimen/size5"
+            android:text="@string/actions_bg_save" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/fragment_container1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size170"
+        android:layout_margin="@dimen/size10"
+        android:background="@drawable/circle_shape_light"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <TextView
+            android:id="@+id/tv_medicine_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:paddingTop="@dimen/size10"
+            android:text="Metformin"
+            android:textSize="@dimen/textSize20"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_medicine_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:text="500"
+            android:textSize="@dimen/textSize60"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_medicine_name" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size30"
+            android:layout_marginEnd="@dimen/size5"
+            android:scaleType="fitCenter"
+            android:src="@drawable/image_medicine"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_medicine_count"
+            app:layout_constraintRight_toLeftOf="@+id/tv_medicine_count"
+            app:layout_constraintTop_toTopOf="@+id/tv_medicine_count" />
+
+        <TextView
+            android:id="@+id/tv_medicine_suit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/background_light"
+            android:gravity="center"
+            android:text="mg"
+            android:textSize="@dimen/textSize18"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_medicine_count" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.microtechmd.pda_app.widget.WidgetSettingItem
+        android:id="@+id/medicine_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@drawable/background_setting_item"
+        android:clickable="true"
+        android:focusable="true"
+        app:itemName="@string/time"
+        app:itemValue="11:20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_container1" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/content_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size1"
+        android:layout_marginBottom="@dimen/size15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/medicine_time" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark">
+
+    <com.microtechmd.pda_app.widget.MainActionBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_light"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RadioButton
+            android:id="@+id/time_7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/time_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/size10"
+            android:text="@string/_7"
+            android:textSize="@dimen/textSize17" />
+
+        <RadioButton
+            android:id="@+id/time_14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/time_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/size10"
+            android:text="@string/_14"
+            android:textSize="@dimen/textSize17" />
+
+        <RadioButton
+            android:id="@+id/time_30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/time_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/size10"
+            android:text="@string/_30"
+            android:textSize="@dimen/textSize17" />
+
+        <RadioButton
+            android:id="@+id/time_custom"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/time_tab"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/size10"
+            android:text="@string/custom"
+            android:textSize="@dimen/textSize17" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rl_date_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size10"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group">
+
+        <TextView
+            android:id="@+id/time_separate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/size5"
+            android:text="—"
+            android:textSize="@dimen/textSize15" />
+
+        <TextView
+            android:id="@+id/time_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/time_separate"
+            android:layout_marginRight="@dimen/size20"
+            android:drawablePadding="@dimen/size6"
+            android:gravity="center"
+            android:padding="@dimen/size5"
+            android:textSize="@dimen/textSize15"
+            tools:text="2018/3/1" />
+
+
+        <TextView
+            android:id="@+id/time_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/time_separate"
+            android:layout_marginLeft="@dimen/size20"
+            android:drawablePadding="@dimen/size6"
+            android:gravity="center"
+            android:padding="@dimen/size5"
+            android:textSize="@dimen/textSize15"
+            tools:text="2018/4/1" />
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_toRightOf="@id/time_end"
+            android:background="@android:drawable/ic_menu_today"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_date_space">
+
+        <LinearLayout
+            android:id="@+id/ll_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/glucose_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginBottom="@dimen/size10"
+                android:background="@drawable/circle_shape_light">
+
+                <TextView
+                    android:id="@+id/tv_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/size10"
+                    android:text="@string/blood_glucose_average"
+                    android:textSize="@dimen/textSize20"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_glucose_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5.2"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/textSize60"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_average" />
+
+                <ImageView
+                    android:layout_width="@dimen/size25"
+                    android:layout_height="@dimen/size30"
+                    android:layout_marginStart="@dimen/size6"
+                    android:layout_marginBottom="@dimen/size15"
+                    android:background="@drawable/trends_glucose"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_glucose_average"
+                    app:layout_constraintLeft_toRightOf="@+id/tv_glucose_average" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/size10"
+                    android:text="@string/unit_mmol_l"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_glucose_average" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_range_statistics"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size10"
+                android:background="@drawable/circle_shape_light"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/size10"
+                    android:text="@string/target_range_statistics"
+                    android:textSize="@dimen/textSize20" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pie_chart"
+                        android:layout_width="@dimen/size150"
+                        android:layout_height="@dimen/size150"
+                        android:layout_margin="@dimen/size5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size10"
+                        android:gravity="center"
+                        android:text="@string/hyper"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textSize18"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text1_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size10"
+                        android:gravity="center"
+                        android:text="(0%)"
+                        android:textSize="@dimen/textSize15"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text1" />
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="@dimen/size0"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text1_1">
+
+                        <TextView
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="end"
+                            android:text="@string/event_count" />
+
+                        <TextView
+                            android:id="@+id/display_hi_events"
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="35" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="@dimen/size0"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+                        <TextView
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="end"
+                            android:text="@string/average_duration" />
+
+                        <TextView
+                            android:id="@+id/display_hi_duration"
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size10"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/size15"
+                        android:text="@string/hypo"
+                        android:textColor="@color/yellow"
+                        android:textSize="@dimen/textSize18"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ll2" />
+
+                    <TextView
+                        android:id="@+id/text2_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size10"
+                        android:gravity="center"
+                        android:text="(0%)"
+                        android:textSize="@dimen/textSize15"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/text2" />
+
+                    <LinearLayout
+                        android:id="@+id/ll3"
+                        android:layout_width="@dimen/size0"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text2_2">
+
+                        <TextView
+                            android:id="@+id/tv_low_events"
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="end"
+                            android:text="@string/event_count" />
+
+                        <TextView
+                            android:id="@+id/display_low_events"
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:text="21" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/size0"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintLeft_toRightOf="@+id/pie_chart"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/ll3">
+
+                        <TextView
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="end"
+                            android:text="@string/average_duration" />
+
+                        <TextView
+                            android:id="@+id/display_low_duration"
+                            android:layout_width="@dimen/size0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start" />
+                    </LinearLayout>
+
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_trends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size10"
+                android:background="@drawable/circle_shape_light"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size10">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="@dimen/size10"
+                    android:text="日趋势"
+                    android:textSize="@dimen/textSize20" />
+
+                <lecho.lib.hellocharts.view.LineChartView
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size10"
+                android:background="@drawable/circle_shape_light"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/size10">
+
+                <TextView
+                    android:id="@+id/tv_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:padding="@dimen/size10"
+                    android:text="@string/more"
+                    android:textSize="@dimen/textSize20" />
+
+                <com.microtechmd.pda_app.widget.expandLayout.ExpandableLayout
+                    android:id="@+id/expandable_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:el_expanded="false"
+                    app:el_parallax="0.5">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size1"
+                        android:background="@color/white_light" />
+
+                    <View
+                        android:layout_width="@dimen/size1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:background="@color/white_light" />
+
+                    <View
+                        android:layout_width="@dimen/size1"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:background="@color/white_light" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.microtechmd.pda_app.widget.expandLayout.ExpandableLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>
